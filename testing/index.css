@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+.search{
+    position: relative;
+    background-color: white;
+    margin: 20px 0;
+    border: 2px solid navy;
+    padding: 10px;
+}
+.box{
+    border: 2px solid red;
+    width: 7%;
+    background-color: transparent;
+    z-index: 1;
+    height: 50px;
+    padding: 7px;
+    display: flex;
+    border-radius: 100px;
+    overflow-x: hidden;
+    
+}
+.display{
+    
+    animation-name: praveen;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes praveen {
+    100%{
+        width: 50%;
+    }
+    
+}
+.input{
+    flex-grow: 1;
+    border: none;
+    padding-left: 50px;
+    z-index: 0;
+    outline: none;
+}
+.img1{
+    position: absolute;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    padding: 7px 7px 7px 8px;
+    border-radius: 100px;
+    z-index: 4;
+}
+/* ----------------------------------------------------------------- */
+.spotify-search{
+    position: relative;
+    background-color: rgb(70, 68, 68);
+    margin: 20px 0;
+    border: 2px solid navy;
+    padding: 10px; 
+}
+.spotify-search:hover{
+    cursor: pointer;
+}
+.img2{
+    position: absolute;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    padding: 7px 7px 7px 8px;
+    border-radius: 100px;
+}
+.spotify-input{
+    
+    border: 2px solid black;
+    height: 50px;
+    width: 7%;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.display2{
+    
+    animation-name: praveen2;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes praveen2 {
+    100%{
+        width: 70%;
+    }
+    
+}
+.input2{
+    border: 100px;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    width: 340px;
+    margin: 0 0 0 60px;
+    font-size: large;
+}
+.stack{
+    height: 30px;
+    padding: 0 15px;
+    border-left: 2px solid white;
+}
+
+
+
+

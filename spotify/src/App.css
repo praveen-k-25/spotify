@@ -1,0 +1,40 @@
+/* .display{
+    animation-name: praveen;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes praveen{
+    100%{
+        width: 400px;
+    }
+}
+.display2{
+    animation-name: praveen2;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    animation-delay: 1s;
+}
+@keyframes praveen2{
+    100%{
+        width: 50px;
+    }
+}
+ */
+ .display {
+    width: 400px; /* Target width for expanded state */
+    overflow: hidden;
+    transition: width 0.7s ease-in-out; /* Smooth transition */
+}
+
+.display2 {
+    width: 50px; /* Target width for collapsed state */
+    overflow: hidden;
+    transition: width 0.7s ease-out; /* Smooth transition */
+}
+
+/* The keyframes are no longer needed because transitions handle the animation */
+
