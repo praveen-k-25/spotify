@@ -27,14 +27,24 @@
  .display {
     width: 400px; /* Target width for expanded state */
     overflow: hidden;
-    transition: width 0.7s ease-in-out; /* Smooth transition */
+    transition: width 0.4s ease-in-out; /* Smooth transition */
 }
 
 .display2 {
     width: 50px; /* Target width for collapsed state */
     overflow: hidden;
-    transition: width 0.7s ease-out; /* Smooth transition */
+    transition: width 0.4s ease-out; /* Smooth transition */
 }
+
+.display_library_search{
+    width: 28px;
+    transition: width 0.3s linear;
+}
+.display_library_search2{
+    width: 150px;
+    transition: width 0.3s linear;
+}
+
 
 /* The keyframes are no longer needed because transitions handle the animation */
 

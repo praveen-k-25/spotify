@@ -2,7 +2,7 @@ import { assets ,songsData} from '../assets/assets';
 
 const Player = () => {
   return ( 
-    <div className="h-[10%] bg-black flex justify-between items-center text-white px-4">
+    <div className="h-[100%] w-[100%] bg-orange-200 flex justify-between items-center text-white px-4 my-2">
       <div className="flex lg:flex items-center gap-4">
         <img className='w-12' src={songsData[0].image} alt="" />
         <div className="">

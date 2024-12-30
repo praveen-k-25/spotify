@@ -1,10 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { assets } from '../assets/assets';
 import '../App.css'
 
 const Nav = () => {
     const [focus,setFocus] = useState(false);
     const [expand,setExpand] = useState(false);
+    const inputRef = useRef();
+
+    useEffect(() => {
+        
+        
+        if(focus){
+        const interval = setInterval(() => {
+          inputRef.current?.focus();
+        }, 800); // Focus the input every 3 seconds
+        
+        // Clear the interval when the component unmounts
+        return () => clearInterval(interval);
+    }
+      }, [focus]);
     
 
 return (
@@ -20,11 +34,13 @@ return (
                 <img className='w-7 p-[1px]' src={assets.home_icon} alt="" />
             </div>
             {/* -------------------------------------------------- */}
-            <div className={` flex-col flex-grow border-[1px] rounded-3xl w-12 overflow-x-hidden ${expand ? 'display' : 'display2'} ${focus ? ' border-white ' : 'border-[#262424]'} `} >
+            <div className={` flex-col flex-grow border-[1px] rounded-3xl w-12 overflow-x-hidden ${expand ? 'display fo' : 'display2'} ${focus ? ' border-white onF ' : 'border-[#262424]'} `} >
 
                 <div className="absolute " onClick={(e)=>{
             e.stopPropagation();
-            setExpand(!expand)
+            setExpand(!expand);
+            !expand ? setFocus(true): setFocus(false) ;
+
         }}>
                     <div className="w-12 h-12 bg-[#262424] grid place-content-center rounded-3xl">
                         <img className={`w-7 ps-[2px] p-[3px] opacity-65 hover:opacity-100 `} src={assets.search_icon} alt="" />
@@ -32,7 +48,7 @@ return (
                 </div>
                 
                 <div className="flex flex-grow m-3 ps-[45px] ">
-                    <input className='outline-none bg-transparent flex-grow' type="text" placeholder='What do you want to play?' />
+                    <input ref={inputRef} className='outline-none bg-transparent flex-grow' type="text" placeholder='What do you want to play?' />
                     <img className='w-6 h-6 grid place-content-center ' src={assets.stack} alt="" />
                 </div>
                 
@@ -56,6 +72,7 @@ return (
      </div>
      <div className="bg-black w-[25px] flex flex-grow md:hidden"></div>
         <div className="access flex justify-center items-center  gap-4 ml-5">
+            <p className=" bg-white text-black text-[14px] font-semibold p-1 px-3 rounded-3xl hidden lg:block">Explore Premium</p>
             <div className="">
                 <a className='text-white whitespace-nowrap text-[13px] font-semibold mr-6'  href="">Install App</a>
             </div>
